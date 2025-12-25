@@ -1,0 +1,27 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/ppsspp18/flutter-notes-app#readme",
+  "bugs": {
+    "url": "https://github.com/ppsspp18/flutter-notes-app/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ppsspp18/flutter-notes-app.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "myServer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "first": "node src/myServer.js",
+    "dev": "nodemon src/myServer.js"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.1",
+    "express": "^5.2.1",
+    "mongoose": "^9.0.2"
+  }
+}
