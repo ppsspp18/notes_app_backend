@@ -11,6 +11,7 @@ app.use(bodyParser.json());
 
 const Note = require('./models/notes');
 
+require("dotenv").config();
 const mongodbpath = process.env.MONGODB_URI;
 mongoose.connect(mongodbpath).then(function()
 {
