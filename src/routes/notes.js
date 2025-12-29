@@ -2,15 +2,9 @@ const express = require("express");
 const router = express.Router();
 const Note = require('./../models/notes');
 
-   
-   // app.get("/notes/lists",async function(req,res){
-   // var notes = await Note.find();
-   // res.json(notes);
-   // });
-
-router.post("/lists",async function(req,res){
+router.post("/lists",async function(req,res){  //request and response
    var notes = await Note.find({userid : req.body.userid});
-   res.json(notes);
+   res.json(notes);  
 });
 
 router.post("/add",async function(req,res){
@@ -26,16 +20,6 @@ router.post("/add",async function(req,res){
     const resp = {message : "new note created" + `with id ${req.body.id}`}
     res.json(resp);
 
-//    const newNote = new Note({
-//     id : "0002",
-//     userid : "psp2",
-//     title : "first note2",
-//     content : "learning2 flutter"
-//    });
-//    newNote.save();
-
-//    const response = {message: "New Note Created!"};
-//    res.json(response);
 });
 
 router.post("/delete",async function(req,res){
@@ -44,6 +28,4 @@ router.post("/delete",async function(req,res){
     res.json(resp);
 });
 
-
-// export router
 module.exports = router;

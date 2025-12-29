@@ -10,6 +10,7 @@ app.use(bodyParser.urlencoded({extended : false}));
 app.use(bodyParser.json());
 
 const Note = require('./models/notes');
+const User = require('./models/login');
 
 require("dotenv").config();
 const mongodbpath = process.env.MONGODB_URI;
@@ -22,6 +23,10 @@ mongoose.connect(mongodbpath).then(function()
 
    const noteRouter = require('./routes/notes');
    app.use("/notes",noteRouter);
+
+   const authRouter = require("./routes/auth");
+   app.use("/auth", authRouter);
+   
 }
 );
 
